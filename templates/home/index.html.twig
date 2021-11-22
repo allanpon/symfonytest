@@ -1,0 +1,15 @@
+{% extends('base.html.twig') %}
+
+{% block title %}
+    Main
+{% endblock %}
+
+{% block body %}
+    {% for message in app.flashes('reussi') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <h1>Bonjour (mais en utilisant Twig).</h1>
+{% endblock %}
